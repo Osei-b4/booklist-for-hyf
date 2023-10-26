@@ -19,16 +19,19 @@ const Booklist = () => {
     },[]);
     return(
         <div className='book-list'>
-            {books.map((book) => (
+
+            {Array.from(books).map((book) => {
+
+                console.log(book)
                 <div key={book.id} className='book'>
-                    <div>
+                    <><div>
                         <h4>{book.title}</h4>
-                        </div>
-                    <div>
-                        <img src={book.image_url} alt='#'/>
-                    </div>
+                    </div><div>
+                            <img src {...book.formats[]} alt='#' />
+                        </div></>
                 </div>
-            )) }
+            })}
+            <book.formats variant="top" src={book.formats[""]} />
 
            
             
